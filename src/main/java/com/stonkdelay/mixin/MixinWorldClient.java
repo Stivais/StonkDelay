@@ -1,6 +1,6 @@
 package com.stonkdelay.mixin;
 
-import com.stonkdelay.BlockChangeEvent;
+import com.stonkdelay.events.BlockChangeEvent;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.multiplayer.WorldClient;
 import net.minecraft.util.BlockPos;
@@ -20,5 +20,4 @@ public class MixinWorldClient {
             cir.cancel();
         }
     }
-
 }

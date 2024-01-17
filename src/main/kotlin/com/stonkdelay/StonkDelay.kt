@@ -5,7 +5,6 @@ import com.stonkdelay.config.Config
 import com.stonkdelay.features.Delay
 import com.stonkdelay.utils.Location
 import net.minecraft.client.Minecraft
-import net.minecraft.init.Blocks
 import net.minecraftforge.client.ClientCommandHandler
 import net.minecraftforge.common.MinecraftForge
 import net.minecraftforge.fml.common.Mod

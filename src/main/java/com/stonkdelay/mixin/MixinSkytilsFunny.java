@@ -1,6 +1,5 @@
 package com.stonkdelay.mixin;
 
-import org.jetbrains.annotations.NotNull;
 import org.spongepowered.asm.mixin.Dynamic;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Pseudo;

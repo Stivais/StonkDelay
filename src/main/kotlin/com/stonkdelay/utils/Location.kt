@@ -1,17 +1,16 @@
 package com.stonkdelay.utils
 
 import com.stonkdelay.StonkDelay
-import net.minecraft.scoreboard.Scoreboard
 import net.minecraft.util.StringUtils.stripControlCodes
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
 import net.minecraftforge.fml.common.gameevent.TickEvent
 import net.minecraftforge.fml.common.network.FMLNetworkEvent
 
 object Location {
+
     var onHypixel = false
     var inSkyblock = false
     var ticks = 0
-
 
     @SubscribeEvent
     fun onConnect(event: FMLNetworkEvent.ClientConnectedToServerEvent) {
@@ -43,7 +42,5 @@ object Location {
             inSkyblock = false
         }
         ticks++
-
     }
-
 }

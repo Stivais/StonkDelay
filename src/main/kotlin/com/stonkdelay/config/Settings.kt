@@ -1,11 +1,10 @@
 package com.stonkdelay.config
+
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.encodeToString
 import java.io.File
-
-
 
 class Config(private val config: File) {
     var settings: Settings = Settings()

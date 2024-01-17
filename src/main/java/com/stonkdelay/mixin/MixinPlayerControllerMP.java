@@ -1,6 +1,6 @@
 package com.stonkdelay.mixin;
 
-import com.stonkdelay.BlockBreakEvent;
+import com.stonkdelay.events.BlockBreakEvent;
 import net.minecraft.client.multiplayer.PlayerControllerMP;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;

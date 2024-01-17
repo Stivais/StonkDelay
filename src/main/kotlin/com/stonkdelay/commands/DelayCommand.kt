@@ -5,6 +5,7 @@ import com.stonkdelay.features.Delay
 import net.minecraft.command.CommandBase
 import net.minecraft.command.ICommandSender
 import net.minecraft.event.ClickEvent
+import net.minecraft.util.BlockPos
 import net.minecraft.util.ChatComponentText
 import net.minecraft.util.ChatStyle
 
@@ -25,6 +26,10 @@ class DelayCommand : CommandBase() {
 
     override fun getRequiredPermissionLevel(): Int {
         return 0
+    }
+
+    override fun addTabCompletionOptions(sender: ICommandSender, args: Array<out String>, pos: BlockPos): List<String> {
+        return if (args.size == 1) getListOfStringsMatchingLastWord(args, "reset", "chest") else listOf()
     }
 
     override fun processCommand(sender: ICommandSender, args: Array<String>) {
@@ -51,8 +56,8 @@ class DelayCommand : CommandBase() {
                         "§cStonkDelay disabled for chests."
                     }))
                 }
-                else -> try {
-                    val delay = arg.toInt()
+                else -> {
+                    val delay = arg.toIntOrNull() ?: return sender.addChatMessage(ChatComponentText("§cNot a valid delay!"))
                     StonkDelay.config.settings.delay = delay
                     StonkDelay.config.save()
                     sender.addChatMessage(ChatComponentText("§aDelay set to $delay ms."))
@@ -65,8 +70,6 @@ class DelayCommand : CommandBase() {
                             ))
                         )
                     }
-                } catch (e: NumberFormatException) {
-                    sender.addChatMessage(ChatComponentText("§cNot a valid delay!"))
                 }
             }
         }

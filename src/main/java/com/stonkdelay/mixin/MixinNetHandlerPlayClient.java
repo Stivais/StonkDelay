@@ -1,8 +1,7 @@
 package com.stonkdelay.mixin;
 
-import com.stonkdelay.BlockBreakEvent;
-import com.stonkdelay.BlockPlaceEvent;
-import com.stonkdelay.ChunkUpdateEvent;
+import com.stonkdelay.events.BlockPlaceEvent;
+import com.stonkdelay.events.ChunkUpdateEvent;
 import net.minecraft.client.network.NetHandlerPlayClient;
 import net.minecraft.network.Packet;
 import net.minecraft.network.play.client.C08PacketPlayerBlockPlacement;

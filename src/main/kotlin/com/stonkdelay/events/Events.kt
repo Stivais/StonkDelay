@@ -1,4 +1,4 @@
-package com.stonkdelay
+package com.stonkdelay.events
 
 import net.minecraft.block.state.IBlockState
 import net.minecraft.item.ItemStack
